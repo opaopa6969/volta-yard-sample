@@ -1,0 +1,11 @@
+{
+  "name": "volta-yard-sample",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A deliberately imperfect little project — a safe target for your first volta-yard job.",
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "license": "MIT"
+}

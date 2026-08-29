@@ -88,6 +88,28 @@ than the paragraph above.
 
 ---
 
+## Starting over
+
+Each exercise leaves the repo changed. To get back to the starting line:
+
+```
+git checkout -- .      # throw away the agent's edits
+git status             # clean again
+npm test               # 3 of 4 fail — back to the start
+```
+
+If a phase-3 run left a branch behind:
+
+```
+git checkout master && git branch -D <the-branch>
+```
+
+Nothing here is worth keeping, so resetting is always the right answer. Run the same
+exercise with a different agent (`claude` / `codex` / `opencode`) and compare — they do
+not solve it the same way, and that difference is worth seeing.
+
+---
+
 <a name="ja"></a>
 
 # 日本語
@@ -167,3 +189,23 @@ PR が出ます。読んでみてください。良い PR は「何を変えた�
 「yard には権限の段階がある」と読んで、信じることはできます。
 でも第 1 段を走らせたあとに `git status` と打って、**本当に何も書かれていない**のを見るのは
 別の経験です。上の説明文より、そちらの方が価値があります。
+
+## やり直す
+
+練習のたびに repo は変わります。出発点に戻すには:
+
+```
+git checkout -- .      # agent の変更を捨てる
+git status             # また clean
+npm test               # 4 件中 3 件が落ちる = 出発点
+```
+
+第 3 段で枝が残っていたら:
+
+```
+git checkout master && git branch -D <その枝>
+```
+
+ここには残す価値のあるものがないので、**戻すのが常に正解**です。
+同じ練習を別の agent（`claude` / `codex` / `opencode`）で走らせて見比べてみてください。
+解き方が同じにはならないので、その違いを見るのに価値があります。
